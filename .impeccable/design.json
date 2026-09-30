@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-10T20:53:00Z",
+  "title": "Design System: Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Electric Ultraviolet",
+        "canonical": "oklch(0.58 0.22 278)",
+        "tonalRamp": [
+          "oklch(0.20 0.15 278)",
+          "oklch(0.32 0.18 278)",
+          "oklch(0.45 0.21 278)",
+          "oklch(0.55 0.22 278)",
+          "oklch(0.58 0.22 278)",
+          "oklch(0.70 0.20 278)",
+          "oklch(0.82 0.14 278)",
+          "oklch(0.92 0.06 278)"
+        ]
+      },
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Clinical Pearl Canvas",
+        "canonical": "oklch(0.985 0.003 250)",
+        "tonalRamp": [
+          "oklch(0.14 0.01 260)",
+          "oklch(0.25 0.008 250)",
+          "oklch(0.45 0.006 250)",
+          "oklch(0.65 0.005 250)",
+          "oklch(0.80 0.004 250)",
+          "oklch(0.90 0.003 250)",
+          "oklch(0.95 0.003 250)",
+          "oklch(0.985 0.003 250)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Technical Charcoal Ink",
+        "canonical": "oklch(0.20 0.008 260)",
+        "tonalRamp": [
+          "oklch(0.10 0.008 260)",
+          "oklch(0.20 0.008 260)",
+          "oklch(0.35 0.009 260)",
+          "oklch(0.48 0.010 260)",
+          "oklch(0.65 0.008 260)",
+          "oklch(0.78 0.006 260)",
+          "oklch(0.88 0.004 260)",
+          "oklch(0.96 0.003 260)"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Hairline Grid Divider",
+        "canonical": "oklch(0.88 0.005 250)",
+        "tonalRamp": [
+          "oklch(0.20 0.005 250)",
+          "oklch(0.35 0.005 250)",
+          "oklch(0.50 0.005 250)",
+          "oklch(0.65 0.005 250)",
+          "oklch(0.75 0.005 250)",
+          "oklch(0.82 0.005 250)",
+          "oklch(0.88 0.005 250)",
+          "oklch(0.94 0.004 250)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display (Kinetic)",
+        "purpose": "Hero page title with mouse-coupled letter tilt."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Project catalog row headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Case study sheet headers and subsection titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Editorial narrative copy and project descriptions."
+      },
+      "label": {
+        "displayName": "Mono Label",
+        "purpose": "Project category classifications and technical metadata."
+      }
+    },
+    "shadows": [
+      {
+        "name": "ambient-spectral-glow",
+        "value": "radial-gradient(circle, color-mix(in oklch, var(--accent) 7%, transparent), transparent 70%)",
+        "purpose": "Pointer-following ambient illumination; drop shadows are strictly prohibited."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-editorial",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Kinetic cursor, hover transitions, and modal transitions."
+      },
+      {
+        "name": "color-transition",
+        "value": "300ms ease-out",
+        "purpose": "Text and icon color transition on catalog hover."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary CTA Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Pill-shaped external live link trigger with inline arrow chevron.",
+      "html": "<a href=\"#\" class=\"ds-btn-primary\"><span>Ver sitio</span><svg class=\"ds-btn-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/></svg></a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 9999px; background: oklch(0.58 0.22 278); color: oklch(0.99 0.002 270); font-family: var(--font-sans, system-ui); font-size: 1rem; font-weight: 500; text-decoration: none; border: none; transition: opacity 200ms ease-out, transform 200ms ease-out; } .ds-btn-primary:hover { opacity: 0.95; transform: scale(1.02); } .ds-btn-icon { width: 16px; height: 16px; transition: transform 200ms ease-out; } .ds-btn-primary:hover .ds-btn-icon { transform: translate(2px, -2px); }"
+    },
+    {
+      "name": "Circular Close Button",
+      "kind": "button",
+      "refersTo": "button-close",
+      "description": "Floating circular dismiss button for the detail modal view.",
+      "html": "<button class=\"ds-btn-close\" aria-label=\"Cerrar\"><svg class=\"ds-close-icon\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 6 6 18\"/><path d=\"m6 6 12 12\"/></svg></button>",
+      "css": ".ds-btn-close { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 9999px; background: oklch(0.995 0.001 250); color: oklch(0.20 0.008 260); border: 1px solid oklch(0.88 0.005 250); cursor: pointer; transition: background 200ms ease-out, color 200ms ease-out; } .ds-btn-close:hover { background: oklch(0.58 0.22 278); color: oklch(0.99 0.002 270); } .ds-close-icon { width: 24px; height: 24px; }"
+    },
+    {
+      "name": "Project Catalog Item",
+      "kind": "card",
+      "refersTo": "project-row",
+      "description": "Laboratory specimen list row with category chip, headline, and hover chevron.",
+      "html": "<div class=\"ds-project-row\"><div class=\"ds-project-info\"><span class=\"ds-project-cat\">Arquitectura</span><h3 class=\"ds-project-title\">Stylebox</h3></div><svg class=\"ds-project-arrow\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/></svg></div>",
+      "css": ".ds-project-row { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; padding: 28px 16px; border-top: 1px solid oklch(0.88 0.005 250); font-family: var(--font-sans, system-ui); cursor: pointer; transition: background-color 300ms ease-out; } .ds-project-info { display: flex; align-items: baseline; gap: 24px; min-width: 0; } .ds-project-cat { font-family: monospace; font-size: 0.75rem; color: oklch(0.48 0.010 260); padding: 4px 12px; border-radius: 9999px; background: oklch(0.94 0.004 250); border: 1px solid oklch(0.88 0.005 250); text-transform: uppercase; letter-spacing: 0.05em; } .ds-project-title { font-size: 2.25rem; font-weight: 300; letter-spacing: -0.025em; color: oklch(0.20 0.008 260); margin: 0; transition: color 300ms ease-out; } .ds-project-arrow { width: 24px; height: 24px; color: oklch(0.48 0.010 260); flex-shrink: 0; transition: color 300ms, transform 300ms; } .ds-project-row:hover { background-color: oklch(0.58 0.22 278 / 0.035); } .ds-project-row:hover .ds-project-title { color: oklch(0.58 0.22 278); } .ds-project-row:hover .ds-project-arrow { color: oklch(0.58 0.22 278); transform: translate(4px, -4px); }"
+    },
+    {
+      "name": "Custom Cursor Dot",
+      "kind": "custom",
+      "refersTo": "cursor-dot",
+      "description": "Pointer follower dot expanding to ultraviolet ring on interactive hover.",
+      "html": "<div class=\"ds-cursor-preview\"><div class=\"ds-dot ds-dot-normal\"></div><div class=\"ds-dot ds-dot-hover\"></div></div>",
+      "css": ".ds-cursor-preview { display: flex; align-items: center; gap: 32px; padding: 24px; background: oklch(0.985 0.003 250); } .ds-dot { border-radius: 9999px; transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), background-color 200ms ease-out; } .ds-dot-normal { width: 10px; height: 10px; background: oklch(0.20 0.008 260); } .ds-dot-hover { width: 35px; height: 35px; background: oklch(0.58 0.22 278); opacity: 0.9; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "\"La Memoria Científica\" (The Scientific Laboratory Monograph)",
+    "overview": "The visual world is inspired by the meticulous clarity of laboratory research documents, academic monographs, and analytical instrumentation. The foundational experience is anchored in a high-contrast Light Mode that evokes clinical, crisp pearl-white archival paper (oklch(0.985 0.003 250)), deep technical charcoal ink typography (oklch(0.20 0.008 260)), and an electric ultraviolet / spectral cobalt accent (oklch(0.58 0.22 278)) that functions with laser-like precision.",
+    "keyCharacteristics": [
+      "Clinical Pearl Canvas: An impeccably clean, high-luminance light surface (oklch(0.985 0.003 250)) with a microscopic cool mineral undertone.",
+      "Technical Charcoal Ink: Deep, legible charcoal (oklch(0.20 0.008 260)) avoiding the harshness of absolute #000000 while maintaining superior contrast.",
+      "Electric Ultraviolet Accent: A laser-sharp spectral cobalt/ultraviolet accent (oklch(0.58 0.22 278)) for active triggers, focal points, and focus rings.",
+      "Zero-Shadow Discipline: Completely flat planar elevation structured by single-pixel hairline dividers and subtle pointer illumination.",
+      "Analytical Typography: Contrast between light-weight humanist grotesque display typography and rigorous monospaced technical labels."
+    ],
+    "rules": [
+      {
+        "name": "The Ultraviolet Precision Rule",
+        "body": "The electric ultraviolet accent is an instrument of precision: it is restricted strictly to active hover states, link chevrons, expanded cursor magnification, and primary CTA pills (≤ 5% of viewport area). It is never deployed as decorative background fill or text paragraph highlights.",
+        "section": "colors"
+      },
+      {
+        "name": "The Kinetic Restraint Rule",
+        "body": "Kinetic typographic shifts follow mouse coordinates but remain bounded (≤ 1.4px per letter) and are deactivated completely when prefers-reduced-motion is detected.",
+        "section": "typography"
+      },
+      {
+        "name": "The Zero Shadow Rule",
+        "body": "Surfaces are flat by definition. Depth is created by cursor-driven light, shared layoutId morphs, and tonal contrast—never blur-radius box-shadows.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do maintain the clinical pearl-white canvas (oklch(0.985 0.003 250)) as the default base environment.",
+      "Do keep primary text in technical charcoal (oklch(0.20 0.008 260)), preserving high contrast without harsh pure black.",
+      "Do restrict the electric ultraviolet accent (oklch(0.58 0.22 278)) to precision focal points and interactive signals.",
+      "Do use Geist Mono for all categorical, technical, and numerical metadata.",
+      "Do test all animations and cursor tracking against prefers-reduced-motion."
+    ],
+    "donts": [
+      "Don't reintroduce warm cream, yellow, or terracotta tints into the background or text.",
+      "Don't add box-shadows, skeuomorphic bevels, or heavy glow filters.",
+      "Don't use neon cyan, purple gradient meshes, or generic cyber tropes; keep the ultraviolet accent razor-sharp and restrained.",
+      "Don't clutter project entries with excessive decorative chips or badges.",
+      "Don't use pure #000000 black for primary body copy."
+    ]
+  }
+}
